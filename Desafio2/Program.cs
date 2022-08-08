@@ -13,7 +13,7 @@ namespace Desafio2
 
             double area = pi * Math.Pow(raio, 2);
 
-            Console.WriteLine($"A=" + area.ToString("F4", CultureInfo.InvariantCulture) +"\n");
+            Console.WriteLine("A=" + area.ToString("F4", CultureInfo.InvariantCulture) +"\n");
         }
     }
 }
