@@ -9,9 +9,9 @@ namespace Desafio4
         {
             // Descomente o exercicio que quiser corrigir
 
-            // Parte1.Program(); 
+            Parte1.Program(); 
 
-            Parte2.Program();
+            // Parte2.Program();
         }   
     }
 }

@@ -10,6 +10,18 @@ namespace Desafio4
             return peso / Math.Pow(altura, 2);
         }
 
+        public static void ImcClassificacao(double imc)
+        {
+            if(imc < 18.50)
+                Console.WriteLine("Sua classificação é: Magreza");
+            else if (imc >= 18.50 && imc <= 24.99)
+                Console.WriteLine("Sua classificação é: Peso ideal");
+            else if(imc > 24.99 && imc <= 29.9)
+                Console.WriteLine("Sua classificação é: Sobrepeso");
+            else
+                Console.WriteLine("Sua classificação é: Obesidade");
+        }
+
         public static double AreaCirculo(double raio)
         {
             return Math.PI * Math.Pow(raio, 2);
@@ -53,14 +65,7 @@ namespace Desafio4
                         Console.WriteLine();
                         Console.WriteLine($"Seu IMC é de: {imc:F2}");
 
-                        if(imc < 18.50)
-                            Console.WriteLine("Sua classificação é: Magreza");
-                        else if (imc >= 18.50 && imc <= 24.99)
-                            Console.WriteLine("Sua classificação é: Peso ideal");
-                        else if(imc > 24.99 && imc <= 29.9)
-                            Console.WriteLine("Sua classificação é: Sobrepeso");
-                        else
-                            Console.WriteLine("Sua classificação é: Obesidade");
+                        ImcClassificacao(imc);
                         
                         Console.WriteLine();
                         break;
@@ -94,7 +99,7 @@ namespace Desafio4
                         break;
 
                     default: 
-                        Console.WriteLine("Nenhuma opção com esse código, tente novamente.");
+                        Console.WriteLine("Nenhuma opção com esse código, tente novamente.\n");
                         break;
                 }
 
