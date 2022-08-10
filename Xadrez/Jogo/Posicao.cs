@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Xadrez
+namespace Xadrez.Jogo
 {
     class Posicao
     {
@@ -18,6 +18,12 @@ namespace Xadrez
         public override string ToString()
         {
             return Linha + ", " + Coluna;
+        }
+
+        public void DefinirValores(int linha, int coluna)
+        {
+            Linha = linha;
+            Coluna = coluna;
         }
     }
 }

@@ -5,17 +5,17 @@ VisualStudioVersion = 16.0.32630.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio1", "Desafio1\Desafio1.csproj", "{8FF0222D-46F1-4195-A4FD-21A2C8A1C72A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Curso", "CursoDotNet\Curso.csproj", "{69438EF1-77F5-412E-9544-3832997B1CA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LessonMisc", "LessonMisc\LessonMisc.csproj", "{69438EF1-77F5-412E-9544-3832997B1CA0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio2", "Desafio2\Desafio2.csproj", "{3EE69E66-2728-40F9-B008-ECAF29119DE6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio3", "Desafio3\Desafio3.csproj", "{EBD11A16-D636-47DC-AB7B-EEEB0AFA4A34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonAbstract", "Aula1\LessonAbstract.csproj", "{72883EEB-C3E8-4FCE-94E1-037C18754699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LessonAbstract", "LessonAbstract\LessonAbstract.csproj", "{72883EEB-C3E8-4FCE-94E1-037C18754699}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonException", "Lessons\LessonException.csproj", "{7C9F51DB-44FE-40BE-9E52-C0DCC6D951CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LessonException", "LessonException\LessonException.csproj", "{7C9F51DB-44FE-40BE-9E52-C0DCC6D951CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xadrez", "Xadrez\Xadrez.csproj", "{E5D4A311-7570-4547-826E-B172A0E0DDD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xadrez", "Xadrez\Xadrez.csproj", "{E5D4A311-7570-4547-826E-B172A0E0DDD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
