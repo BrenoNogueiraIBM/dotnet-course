@@ -36,9 +36,10 @@ namespace Desafio6
             int qte = int.Parse(Console.ReadLine());
 
             double valor = ValorCodigo(codigo);
+
             double valorTotal = valor * qte;
 
-            Console.WriteLine("Total: " + valorTotal.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Total: R$ " + valorTotal.ToString("F2", CultureInfo.InvariantCulture));
         }
     }
 }
