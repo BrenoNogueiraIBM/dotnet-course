@@ -41,6 +41,11 @@ namespace Xadrez
                         Console.WriteLine(e.Message);
                         Console.ReadKey();
                     }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                        Console.ReadKey();
+                    }
                 }
             }
             catch (Exception e)
