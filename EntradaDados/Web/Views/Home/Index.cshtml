@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<form asp-controller="Home" asp-action="Soma">
+    <label>Valor 1</label>
+    <input type="number" name="valor1" value="@ViewBag.Valor1"/>
+    <br /> <br />
+    <label>Valor 2</label>
+    <input type="number" name="valor2" value="@ViewBag.Valor2"/>
+    <br /> <br />
+    <input type="submit" value="Calcular!" />
+</form>
+
+<br /> <br />
+
+@ViewBag.Resultado

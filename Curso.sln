@@ -23,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LessonFile", "LessonFile\Le
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LessonInterface", "LessonInterface\LessonInterface.csproj", "{E1590789-2E4A-4868-A212-567CF0B430D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio6", "Desafio6\Desafio6.csproj", "{195B00D5-B7CC-4BFA-A2CE-E5F5F988B4B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio6", "Desafio6\Desafio6.csproj", "{195B00D5-B7CC-4BFA-A2CE-E5F5F988B4B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonGenerics", "LessonGenerics\LessonGenerics.csproj", "{9C207E2B-2C8F-47E5-AEFC-6B9EF8F4CABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio7", "Desafio7\Desafio7.csproj", "{BAADC6B8-333B-438B-BA97-E3404DDD3EC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{195B00D5-B7CC-4BFA-A2CE-E5F5F988B4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{195B00D5-B7CC-4BFA-A2CE-E5F5F988B4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{195B00D5-B7CC-4BFA-A2CE-E5F5F988B4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C207E2B-2C8F-47E5-AEFC-6B9EF8F4CABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C207E2B-2C8F-47E5-AEFC-6B9EF8F4CABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C207E2B-2C8F-47E5-AEFC-6B9EF8F4CABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C207E2B-2C8F-47E5-AEFC-6B9EF8F4CABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAADC6B8-333B-438B-BA97-E3404DDD3EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAADC6B8-333B-438B-BA97-E3404DDD3EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAADC6B8-333B-438B-BA97-E3404DDD3EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAADC6B8-333B-438B-BA97-E3404DDD3EC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
