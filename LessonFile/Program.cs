@@ -83,39 +83,64 @@ namespace LessonFile
 
             //==========================================================================
 
-            string path = @"C:\Users\017585631\Desktop\codes\Curso\LessonFile\Folder";
+            //string path = @"C:\Users\017585631\Desktop\codes\Curso\LessonFile\Folder";
 
+            //try
+            //{
+            //    IEnumerable<string> folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+            //    Console.WriteLine("FOLDERS: ");
+            //    foreach(string s in folders)
+            //    {
+            //        Console.WriteLine(s);
+            //    }
+
+            //    var files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
+            //    Console.WriteLine("FILES: ");
+            //    foreach (string s in files)
+            //    {
+            //        Console.WriteLine(s);
+            //    }
+
+            //    Directory.CreateDirectory(path + "\\newFolder");
+
+            //    Console.WriteLine("DirectorySeparatorChar: " + Path.DirectorySeparatorChar);
+            //    Console.WriteLine("PathSeparator: " + Path.PathSeparator);
+            //    Console.WriteLine("GetDirectoryName: " + Path.GetDirectoryName(path));
+            //    Console.WriteLine("GetFileName: " + Path.GetFileName(path));
+            //    Console.WriteLine("GetExtension: " + Path.GetExtension(path));
+            //    Console.WriteLine("GetFileNameWithoutExtension: " + Path.GetFileNameWithoutExtension(path));
+            //    Console.WriteLine("GetFullPath: " + Path.GetFullPath(path));
+            //    Console.WriteLine("GetTempPath: " + Path.GetTempPath());
+
+            //}
+            //catch (IOException e)
+            //{
+            //    Console.WriteLine("Error: " + e.Message);
+            //}
+
+            //==========================================================================
+            HashSet<LogRecord> set = new HashSet<LogRecord>();
+
+            Console.Write("Enter file full path: ");
+            string path = Console.ReadLine();
             try
             {
-                IEnumerable<string> folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
-                Console.WriteLine("FOLDERS: ");
-                foreach(string s in folders)
+                using (StreamReader sr = File.OpenText(path))
                 {
-                    Console.WriteLine(s);
+                    while (!sr.EndOfStream)
+                    {
+                        string [] line = sr.ReadLine().Split(" ");
+                        string name = line[0];
+                        DateTime instant = DateTime.Parse(line[1]);
+
+                        set.Add(new LogRecord { Username = name, Instant = instant });
+                    }
+                    Console.WriteLine("Total Users: " + set.Count);
                 }
-
-                var files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
-                Console.WriteLine("FILES: ");
-                foreach (string s in files)
-                {
-                    Console.WriteLine(s);
-                }
-
-                Directory.CreateDirectory(path + "\\newFolder");
-
-                Console.WriteLine("DirectorySeparatorChar: " + Path.DirectorySeparatorChar);
-                Console.WriteLine("PathSeparator: " + Path.PathSeparator);
-                Console.WriteLine("GetDirectoryName: " + Path.GetDirectoryName(path));
-                Console.WriteLine("GetFileName: " + Path.GetFileName(path));
-                Console.WriteLine("GetExtension: " + Path.GetExtension(path));
-                Console.WriteLine("GetFileNameWithoutExtension: " + Path.GetFileNameWithoutExtension(path));
-                Console.WriteLine("GetFullPath: " + Path.GetFullPath(path));
-                Console.WriteLine("GetTempPath: " + Path.GetTempPath());
-
             }
             catch (IOException e)
             {
-                Console.WriteLine("Error: " + e.Message);
+                Console.WriteLine(e.Message);
             }
         }
     }

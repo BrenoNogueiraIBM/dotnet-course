@@ -39,14 +39,15 @@ namespace Desafio7
 
             int diferenca = DiferencaDatas(dataInicial, dataFinal);
 
-            if(diferenca <= 0){
+            if (diferenca <= 0)
+            {
                 diferenca = DiferencaDatas(dataInicial, dataFinal + (24 * 60)); // Adiciona 24h na data final, se o resultado der negativo ou zero
             }
-                
+
             horaFinal = ExtrairHoras(diferenca);
             minutoFinal = ExtrairMinutos(diferenca, ExtrairHoras(diferenca));
 
-            System.Console.WriteLine("O JOGO DUROU " + horaFinal + " HORA(S) E " + minutoFinal + " MINUTO(S)");
+            Console.WriteLine("O JOGO DUROU " + horaFinal + " HORA(S) E " + minutoFinal + " MINUTO(S)");
         }
     }
 }

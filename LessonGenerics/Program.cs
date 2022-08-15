@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Globalization;
 using Course.Entities;
 using Course.Services;
@@ -104,19 +105,48 @@ namespace LessonGenerics
             //Console.WriteLine(compare.Contains("Maria"));
             //========================================================================
 
-            HashSet<Product> a = new HashSet<Product>();
-            a.Add(new Product("TV", 9000.0));
-            a.Add(new Product("Notebook", 1200.0));
+            //HashSet<Product> a = new HashSet<Product>();
+            //a.Add(new Product("TV", 9000.0));
+            //a.Add(new Product("Notebook", 1200.0));
 
-            HashSet<Point> b = new HashSet<Point>();
-            b.Add(new Point(3, 4));
-            b.Add(new Point(5, 10));
+            //HashSet<Point> b = new HashSet<Point>();
+            //b.Add(new Point(3, 4));
+            //b.Add(new Point(5, 10));
 
-            Product prod = new Product("Notebook", 1200.0);
-            Console.WriteLine(a.Contains(prod));
+            //Product prod = new Product("Notebook", 1200.0);
+            //Console.WriteLine(a.Contains(prod));
 
-            Point point = new Point(3, 4);
-            Console.WriteLine(b.Contains(point));
+            //Point point = new Point(3, 4);
+            //Console.WriteLine(b.Contains(point));
+
+            //========================================================================
+
+            //Dictionary<string, string> cookies = new Dictionary<string, string>();
+
+            //cookies["User"] = "Maria";
+            //cookies["Email"] = "Maria@gmail.com";
+            //cookies["Phone"] = "99974837284";
+            //cookies["Phone"] = "89284918492";
+
+            //Console.WriteLine(cookies["Phone"]);
+
+            //if (cookies.ContainsKey("Id"))
+            //    Console.WriteLine(cookies["Id"]);
+            //else
+            //    Console.WriteLine("No Id in the Dictionary");
+
+            //Console.WriteLine(cookies.Count);
+
+            //foreach(KeyValuePair<string,string> item in cookies)
+            //    Console.WriteLine(item.Key + ":" + item.Value);
+
+            //========================================================================
+
+            DateTime dt = new DateTime(2022, 4, 16, 8, 10, 45);
+            Console.WriteLine(dt.ElapsedTime());
+
+            string s = "Good Morning dear students!";
+            Console.WriteLine(s.Cut(10));
 
         }
 
