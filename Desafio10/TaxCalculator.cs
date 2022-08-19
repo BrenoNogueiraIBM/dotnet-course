@@ -1,40 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace Desafio10
 {
-    static class TaxCalculator
+    class TaxCalculator
     {
-        private static double[] LimiteInferior = new double[] { 0, 2000.01, 3000.01, 4500.01 };
-        private static double[] LimiteSuperior = new double[] { 2000.00, 3000.00, 4500.00, 4500.01 };
-        private static double[] Taxas = new double[] { 0, 0.08, 0.18, 0.28 };
-        private static double LimiteFinal = 4500.01;
+        private double[] _lowerLimit;
+        private double[] _upperLimit;
+        private double[] _tax;
+        private double _lastLimit;
 
-        public static double CalculateTax(double salario)
+        public TaxCalculator(double[] lowerLimit, double[] upperLimit, double[] tax, double lastLimit)
         {
-            if (salario < 0)
+            _lowerLimit = lowerLimit;
+            _upperLimit = upperLimit;
+            _tax = tax;
+            _lastLimit = lastLimit;
+        }
+
+        private double CalculateTax(double salary)
+        {
+            if (salary < 0)
                 return 0;
 
             double imposto = 0;
-            for (int i = 0; i < LimiteSuperior.Length; i++)
+            for (int i = 0; i < _upperLimit.Length; i++)
             {
-                if (salario - LimiteInferior[i] < 0 && salario - LimiteSuperior[i] < 0)
+                if (salary - _lowerLimit[i] < 0 && salary - _upperLimit[i] < 0)
                     break;
 
-                if (LimiteSuperior[i] == LimiteFinal)
+                if (_upperLimit[i] == _lastLimit)
                 {   
-                    imposto += (salario - LimiteFinal) * Taxas[i];
+                    imposto += (salary - _lastLimit) * _tax[i];
                     break;
                 }
 
-                if (salario - LimiteSuperior[i] < 0)
-                    imposto += (salario - LimiteInferior[i]) * Taxas[i];
+                if (salary - _upperLimit[i] < 0)
+                    imposto += (salary - _lowerLimit[i]) * _tax[i];
                 else
-                    imposto += (LimiteSuperior[i] - LimiteInferior[i]) * Taxas[i];
+                    imposto += (_upperLimit[i] - _lowerLimit[i]) * _tax[i];
             }
 
             return imposto;
+        }
+
+        public string GetTaxes(double salary)
+        {
+            double imposto = CalculateTax(salary);
+            return imposto > 0 ? "R$ " + imposto.ToString("F2", CultureInfo.InvariantCulture) : "Isento";
         }
     }
 }

@@ -8,14 +8,19 @@ namespace Desafio10
     {
         static void Main(string[] args)
         {
+            TaxCalculator tax = new TaxCalculator(
+                    new double[] { 0, 2000.01, 3000.01, 4500.01 },
+                    new double[] { 2000.00, 3000.00, 4500.00, 4500.01 },
+                    new double[] { 0, 0.08, 0.18, 0.28 },
+                    4500.01
+                    );
+
             while (true)
             {
                 Console.Write("Caro cidadão Lisarbiano, digite seu salário: ");
-                double salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                double salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-                double imposto = TaxCalculator.CalculateTax(salario);
-                string text = imposto > 0 ? "R$ " + imposto.ToString("F2", CultureInfo.InvariantCulture) : "Isento";
-                Console.WriteLine(text);
+                Console.WriteLine(tax.GetTaxes(salary));
             }
         }
     }
